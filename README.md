@@ -1,13 +1,13 @@
 # Assignment13DatabaseComparison
 
-<p>Load data from the csv file to Neo4j datababase</p>
+<h1>Load data from the csv file to Neo4j datababase</h1>
 
 USING PERIODIC COMMIT
 LOAD CSV FROM 'file:///social_network_nodes.csv' AS line
 CREATE (:Artist { id: line[0], name: line[1], job: line[2], birthday:line[3]})
 
 
-<p>Load data from the csv file to SQL datababase</p>
+<h1>Load data from the csv file to SQL datababase</h1>
 
 first create schema with name SocialNetwork, then create table named social_network_nodes.
 
