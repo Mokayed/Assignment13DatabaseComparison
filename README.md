@@ -28,4 +28,9 @@ mysql -u root -p --local-infile socialNetwork
 SHOW GLOBAL VARIABLES LIKE 'local_infile';
 SET GLOBAL local_infile = 'ON';
 
-load data local infile '/social_network_nodes.csv' into table social_network_nodes;
+LOAD DATA local INFILE '/social_network_nodes.csv' 
+INTO TABLE social_network_nodes 
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
